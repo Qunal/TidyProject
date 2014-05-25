@@ -19,6 +19,7 @@ feature<-read.table("features.txt")
 tok <- feature$V2
 tok <- gsub(pattern="\\(\\)$", x=tok, replacement="")# handels ending braces only
 tok <- gsub(pattern="\\(\\)", x=tok, replacement=".")# Remaining ending () 
+tok <- gsub(pattern="\\(tBody", x=tok, replacement=".body.")# Just for Angel(tbody
 tok <- gsub(pattern="\\)$", x=tok, replacement="")# Angel ending) 
 tok <- gsub(pattern="\\(|\\)", x=tok, replacement=".")# Remaining ending ( or ) Angel 
 tok <- gsub(pattern="Mean$", x=tok, replacement=".mean")# Angel Mean
@@ -32,7 +33,7 @@ tok <- gsub(pattern="Gyro", x=tok, replacement="gyro.")# Gyro
 tok <- gsub(pattern="Jerk", x=tok, replacement="jerk.")# Jerk
 tok <- gsub(pattern="Mag", x=tok, replacement="mag.")# Mag
 tok <- gsub(pattern="Gravity", x=tok, replacement="gravity.")# Gravity
-tok <- gsub(pattern="Acc", x=tok, replacement="acc.")# remainin acc Resarch excliding 
+tok <- gsub(pattern="Acc", x=tok, replacement="acc.")# remainin acc Resarch excliding
 tok <- gsub(pattern="-", x=tok, replacement=".")# - with .
 tok <- gsub(pattern="..", x=tok, replacement=".",fixed=TRUE)# .. with .
 tok <- tolower(tok)
@@ -127,4 +128,6 @@ tidydf2=read.table("tidydf.txt",stringsAsFactor=FALSE,header=TRUE)
 
 
 
-
+##
+#Colnames for codebook
+#list.Variables<-write.csv(names(tidydf),"list_variables")

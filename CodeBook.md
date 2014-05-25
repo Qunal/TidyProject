@@ -161,8 +161,8 @@ _angle_ measures are troublesome from a naming perspective
 ## Column Names Lisiting 
 
 _ MArkdown table generator output_
+_Last moment correction Angel. Not reviewed for side effects_
 
- 
 | 1   | subject                                 	|   	|
 |----	|-----------------------------------------	|---	|
 | 2  	| activity                                	|   	|
@@ -252,9 +252,4 @@ _ MArkdown table generator output_
 | 86 	| angle.x.gravity.mean                    	|   	|
 | 87 	| angle.y.gravity.mean                    	|   	|
 | 88 	| angle.z.gravity.mean                    	|   	|
-
-
-
-
-
 
